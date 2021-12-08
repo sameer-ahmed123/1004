@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/emp">
+    {% csrf_token %}
+    <div>
+        <label>Student Name :</label>
+        {{ forms.student_name}}
+    </div>
+    <div>
+        <lable>Student Roll number: </lable>
+        {{forms.student_roll}}
+    </div>
+    <div>
+        <lable>student class</lable>
+        {{ forms.student_class}}
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
