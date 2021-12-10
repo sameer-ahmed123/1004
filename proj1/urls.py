@@ -16,8 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from App.views import emp,show,update,destroy,edit
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("App.urls")),
+]
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('emp', emp),
+    path('show/',show),
+    path('edit/<int:id>',edit),
+    path('update/<int:id>', update),
+    path('delete/<int:id>', destroy),
 ]
